@@ -1,1 +1,1 @@
-#.env File is not given since it contains Bot code
+# .env File is not given since it contains Bot code
