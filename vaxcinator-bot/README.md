@@ -6,8 +6,8 @@
   
   <img src="http://cinespot.net/gallery/d/296789-1/in+ghost+house+inn+Malayalam+Movie+Photos+_20_.JPG" height="400px">
   
-  #h1 Here To Help You Get Your Vaccine!
-  #h2 
+  #1 Here To Help You Get Your Vaccine!
+  #2 
   
  </div>
 
