@@ -13,7 +13,7 @@
  
  <div align=""left>
   
-  ## Project Team
+  ## Team Appukuttan
   ### 1.Adheel Ahmed Chelakkot
   ### 2.Abdul Hadi BP
   ### 3.Sreelakshmi K
