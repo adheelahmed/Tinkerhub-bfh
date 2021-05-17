@@ -4,13 +4,36 @@ const { Client, Message, GuildMember, MessageMentions, User } = require('discord
 const client = new Client();
 const PREFIX = "."
 const fetch = require("node-fetch").default;
+const request = require("request");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 client.on('ready', () =>{
+    
     console.log( `${client.user.tag} has logged in.`);
+    console.log( `${client.user.tag} Ready to Message`);
+    client.channels.cache.get('843877941108277308').send('\nHello here Iam Appukutan :wink: . and Im here to help you get Vaccinated!\nTest Running');
+    
 });
 
-var Arr=["hello","hi","lo"];
 
 
 function x () {
@@ -23,9 +46,12 @@ function x () {
 
 
 
+
 client.on('message',(message) =>
 {
    
+    
+
 
    
 
@@ -85,7 +111,7 @@ client.on('message',(message) =>
      return 0;
        
     }
-    if(message.content.toLowerCase() == "who created you" )
+    if(message.content.toLowerCase() == "who made you" )
     {  
         message.reply("\nI Was Created By Team Appukuttan\nThey work for me:laughing: ");
      return 0;
@@ -95,7 +121,27 @@ client.on('message',(message) =>
 
     if(message.content.toLowerCase() == "what is your name" )
     {  
-        message.reply("\nIm Appukuttan.....Call me Appu");
+        message.reply("\nIm Appukuttan.....Call Me Appu");
+     return 0;
+       
+    }
+
+
+    if(message.content.toLowerCase() == "whats your name" )
+    {  
+        message.reply("\nIm Appukuttan.....Call Me Appu");
+     return 0;
+       
+    }
+    if(message.content.toLowerCase() == "what's your name" )
+    {  
+        message.reply("\nIm Appukuttan.....Call Me Appu");
+     return 0;
+       
+    }
+    if(message.content.toLowerCase() == "your name" )
+    {  
+        message.reply("\nThe Name is Appukuttan.....People Call Me Appu");
      return 0;
        
     }
@@ -120,23 +166,44 @@ client.on('message',(message) =>
        
     }
 
-    if(message.content.toLowerCase() == ".vaccinator mode" )
-    {  
-        message.reply("\nVaccinator Mode Online! :syringe: \n\n\nI Can help you find Place Near you to get vaccinated..\n\nEnter Your Pincode by firstly initializing by typing pincode \n\nEnter Your Pincode");
  
+
+    
+
+    if(message.channel.id == "843877941108277308"){
+
+        if(message.content.toLowerCase() == ".vaccinator mode" )
+        {  
+            message.reply("\nVaccinator Mode Online! :syringe: \n\n\nI Can help you find Place Near you to get vaccinated..\n\nType Your State Id Below \n\nEnter Your State Id");
+     
+          
+           return 0;
        
+        }
+
       
-       return 0;
-   
-    }
-    if(message.content == "673631"){
        console.log(message.content);
-     fetch ( `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${message.content}&date=31-03-2021`)
-       .then(sessions => sessions.json())
-       .then(data =>{
-           message.channel.send(data.sessions.name)
-       }) 
+
+       if(message.author.bot){
+           return 0;
+       }
+       else{
+           request({
+         url: "https://cdn-api.co-vin.in/api/v2/admin/location/districts/16",
+           json: true
+        
+               
+           }, (err, response, body) =>{
+               console.log(JSON.stringify(body, undefined, 4));
+           });
+
+
+        
+       }
+     
+
     }
+
        
      
 
@@ -188,3 +255,9 @@ client.on('message',(message) =>
 
 
 client.login(process.env.DISCROD_BOT_TOKEN);
+
+
+
+
+
+
