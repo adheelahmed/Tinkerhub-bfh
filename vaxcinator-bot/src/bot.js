@@ -7,25 +7,6 @@ const fetch = require("node-fetch").default;
 const request = require("request");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 client.on('ready', () =>{
     
     console.log( `${client.user.tag} has logged in.`);
@@ -204,17 +185,7 @@ client.on('message',(message) =>
 
     }
 
-       
-     
-
-
-
-
-
-
-
-
-
+      
 
 
     if(message.content == ".help")
@@ -244,20 +215,10 @@ client.on('message',(message) =>
 
     }
     
-
-
-
     
 });
 
 
 
 
-
 client.login(process.env.DISCROD_BOT_TOKEN);
-
-
-
-
-
-
