@@ -6,7 +6,7 @@ const PREFIX = ".";
 const fetch = require("node-fetch").default;
 const { chatBot } = require('reconlx');
 const botsettings = require("./botsettings.json")
-const prefix = botsettings.prefix;
+const prefix = ".";
 
    
     client.on('ready', () =>{
