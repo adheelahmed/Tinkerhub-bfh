@@ -26,17 +26,10 @@ bot.on('ready', () =>{
 });
 
 
-
-
 bot.on('ready',() =>{
     console.log('ready to deploy')
-
 })
-
-
-
 bot.login(process.env.DISCROD_BOT_TOKEN);
-
 
 
 

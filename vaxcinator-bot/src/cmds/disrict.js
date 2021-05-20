@@ -5,7 +5,6 @@ const { Client, Message, GuildMember, MessageMentions, User } = require('discord
 const { post } = require("snekfetch");
 const client = new Client();
 const PREFIX = ".";
-const Discord = require("discord.js");
 
 
 
@@ -22,43 +21,6 @@ client.on('ready', () =>{
 
 
 client.on('message',(message) =>
-    { 
-
-            console.log(message.content);
-
-       
-        if(message.channel.id ==="843877941108277308"){
-           
-         
-
-
-             snekfetch.get(api).then(r => {
-
-                
-                    let body = r.body;
-                    let id = message.content;
-                    let store = body
-                    store.states.type;                                
-                    if(message.author.bot) return;
-                    let valueGreater = message.content;
-                    let valueSmaller = message.content;
-                    if (valueSmaller < 1) return message.reply("This Value Dosen't Exist");
-                    if(valueGreater > 36 ) return message.channel.send("This Value Dosen't Exist");
-                    console.log(store.states[message.content].state_id);
-                    const a = store.states[message.content].state_name;
-                    const b = store.states[message.content].state_id;
-                    message.reply(`\nYou Have Selected : ${a}`);
-                                    
-                
-                
-                    });   
-                            
-    }
-        
-});
-
-
-/*client.on('message',(message) =>
     { 
 
             console.log(message.content);
@@ -86,10 +48,9 @@ client.on('message',(message) =>
          
     }
 
+    
+
+
+
 });
-*/
-
-
-
 client.login(process.env.DISCROD_BOT_TOKEN);
-
