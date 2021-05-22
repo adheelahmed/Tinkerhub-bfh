@@ -35,8 +35,7 @@ client.on('message',(message) =>
                     let id = message.content;
                     let store = body
                     store.states.type;
-               
-                    
+                                  
                     if(message.author.bot) return;
                     console.log(store.states[message.content].state_id);
                     const a = store.states[message.content].state_name;
