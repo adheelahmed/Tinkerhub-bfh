@@ -20,30 +20,13 @@ client.on('ready', () =>{
 });
 
 
-client.on('message',(message) =>
-    { 
+client.on('message',(message) =>{
 
-            console.log(message.content);
+
+if(message.channel.type === "dm"){ 
+            
 
        
-        if(message.channel.id ==="843877941108277308"){
-           
-           
-                snekfetch.get(api).then(r => {
-                
-                    let body = r.body;
-                    let id = message.content;
-                    let store = body
-                    store.states.type;
-                                  
-                    if(message.author.bot) return;
-                    console.log(store.states[message.content].state_id);
-                    const a = store.states[message.content].state_name;
-                    message.reply(`\nYou Have Selected : ${a} `);
-                  
-                });
-            
-            
          
     }
 

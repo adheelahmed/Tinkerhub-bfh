@@ -1,23 +1,55 @@
 
 
-const { Client, Message, GuildMember, MessageMentions, User } = require('discord.js');
+const { Client, Message, GuildMember, MessageMentions, User, GuildChannel } = require('discord.js');
 const client = new Client();
 const PREFIX = ".";
 const fetch = require("node-fetch").default;
 const { chatBot } = require('reconlx');
 const botsettings = require("./botsettings.json")
 const prefix = botsettings.prefix;
+const Discord = require("discord.js");
 
    
     client.on('ready', () =>{
     
         console.log( `${client.user.tag} has logged in.`);
-        console.log( `${client.user.tag} Ready to Message`);
+        console.log( `${client.user.tag} Function.js Up`);
+
+        //message.send("Hi There To Access Our Covid Registration Process Send Me Private Message");
        
-        client.channels.cache.get('843434093482868769').send('\nThe Second Is Running Now on General channel');
     });
+
+
+
+
+    const newEmbed2 = new Discord.MessageEmbed() 
+    .addFields(     
+               {name: 'Vaccinator Mode Online! :syringe:', value: 'I Can help you find Place Near you to get vaccinated.'},
+               {name: 'What We Require From You', value: 'Your Name\nYour Age\nYour State\nYour District\nYour Pincode'},
+           
+    )
+    .setColor('#4ce8fc')
+    .setFooter('(This Data will be Stored so That the bot would be able to update hourly abot free vaccine slots)')
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
     client.on('message',(message) =>
     { 
+        
+
+
+      
 
 console.log(`[${message.author.tag}]: ${message.content} `);
 
@@ -70,7 +102,7 @@ var help = A;
      return 0;
        
     }
-    if(message.content.toLowerCase() == ".dwho made you" )
+    if(message.content.toLowerCase() == ".who made you" )
     {  
         message.reply("\nI Was Created By Team Appukuttan\nThey work for me:laughing: ");
      return 0;
@@ -125,23 +157,25 @@ var help = A;
        
     }
 
+
     if(message.content.toLowerCase() == ".vaccinator mode" )
     {  
-        message.reply("\nVaccinator Mode Online! :syringe: \n\n\nI Can help you find Place Near you to get vaccinated..\n\nEnter Your Pincode by firstly initializing by typing pincode \n\nEnter Your Pincode");
- 
-       
-      
+        message.reply(newEmbed2);
        return 0;
    
     }
 
+  
 
-    if(message.content == ".help")
+    
 
-    {
+    if(message.content.toLowerCase() == "help") {
         message.reply(help)
         return 0;
     }
+    if(!message.channel.type === "dm"){
+        message.reply
+}
 
 
 
@@ -150,9 +184,9 @@ var help = A;
         return 0;
     }
     else { 
-        if(message.channel.id ==="843434093482868769"){
          
-               if(message.content.startsWith(prefix)){
+        if(message.channel.type === 'dm') return;
+        if(message.content.startsWith(prefix)){
 
               
                 console.log(message.content);
@@ -166,9 +200,11 @@ var help = A;
     
         
     }
-        }
+        
     
     }
+
+
 });
 
 

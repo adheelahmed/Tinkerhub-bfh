@@ -11,11 +11,11 @@ const fs = require("fs");
 
 
 
-apiCaller = require("./cmds/states")
+
 
 
 chat = require("./functions")
-
+apiCaller = require("./cmds/states")
 
 bot.on('ready', () =>{
     
