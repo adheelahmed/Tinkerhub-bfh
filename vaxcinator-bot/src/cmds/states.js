@@ -107,6 +107,104 @@ if(message.content.toLowerCase() === ".display states"){
             
 
              snekfetch.get(api).then(r => {
+   /*abdul hadi code  */
+
+
+   discord_bot.on('message',async (message)=>{
+    const commands = message.content.toLocaleLowerCase().split(' ') //divide message to words and store in array
+    
+    if(!message.author.bot){
+        if(message.channel.type=='dm'){ 
+            const userId=message.author.id;           
+            if(commands[0]=='show'){
+                if(commands[1]=='states'||commands[1]=='state'){
+                    message.channel.send(msg.states)
+                    //show states
+                }else if(commands[1]=='districts'||commands[1]=='district'){
+                    if(commands[2]>0&&commands[2]<38){
+                        message.channel.send(msg.district[commands[2]])
+                        //show districts
+                    }else{
+                        message.channel.send('invalid state code')
+                        //invalid state code
+                    }
+                }else if(commands[1]=='mydata'){
+                    await showUser(userId)
+                    //show user data
+                }else{
+                    message.channel.send(msg.showMessages)
+                    //send show codes 
+                }
+            }else if(commands[0]=='check'){
+                if(commands[1]=='district'&&commands[2]&&commands[3]){
+                    const d= districtList.find(e=>e.district_id==commands[2])
+                    if(d){
+                        checkDistrict(userId,commands[2],commands[3])
+                    }else{
+                        message.channel.send('invalid district code')
+                    }//check whether district code is valid
+                }else if(commands[1]=='pincode'&&commands[2].length==6&&commands[3]){
+                    checkPincode(userId,commands[2],commands[3])                
+                }else{
+                    message.channel.send(msg.checkMessages)
+                    // send check codes
+                }
+            }else if(commands[0]=='register') {
+                if(commands[1]&&commands[2]){
+                    const d= districtList.find(e=>e.district_id==commands[1])
+                    if(d){
+                        await addUser(userId,message.author.username,commands[1],d.district_name,commands[2])
+                        await addDistrict(commands[1],d.district_name)
+                        await showUser(userId)
+                    }else{
+                        message.channel.send('invalid district code')
+                    }                   
+                    // add user db
+                }else{
+                    message.channel.send(msg.registerMessage)
+                }
+            }else if(commands[0]=='update'){
+                if(commands[1]=='age'&&commands[2]){
+                    await updateAge(userId,commands[2])
+                    await showUser(userId)
+                    //update age
+                }else if(commands[1]=='district'&&commands[2]){
+                    const d= districtList.find(e=>e.district_id==commands[2])
+                    if(d){
+                        await updateDistrict(userId,commands[2],d.district_name)
+                        await showUser(userId)
+                    }else{
+                        message.channel.send('Invalid District code')
+                    }                   
+                    // update district
+                }else{
+                    message.channel.send(msg.updateMessage)
+                    //send update code
+                }
+            }else if(commands[0]=='unregister'){
+                await deleteUser(userId)
+                message.channel.send('Unregistered from daily updates')
+                // delete user
+            }else if(commands[0]=='help'){
+                message.channel.send(msg.commandsMessage);
+            }else{
+                message.channel.send("invalid command\n\n send 'help' to see all commands")
+                //invalid command
+            }
+        }
+        else if(message.channel.type=='text'){           
+            if(commands[0]=='$vacbot'&&message.channel.permissionsFor(message.guild.me).has('SEND_MESSAGES')){
+                message.channel.send(msg.aboutMessage)
+            }//respond with an about message to channels which bot have 'SEND_MESSAGES' permission
+        }
+    }
+})
+
+
+
+
+
+     //////////---------------------------------------- /*abdul hadi code  */
 
                 
                     let body = r.body;
