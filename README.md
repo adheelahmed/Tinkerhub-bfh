@@ -1,10 +1,10 @@
-<div align="center"><img src="https://raw.githubusercontent.com/aquibe/VacBot/main/assets/wlogo.png"  width="500em" ></div>
+<div align="center"><img src="#"  width="500em" ></div>
 
 <h1 align="center">Appukuttan </h1>
 
-<p align="center">Hey there!👋🏻, this is a Discord Bot called VacBot, which will check Covid vaccination slots availability in your area and alert you when a slot becomes available. Build by <a href="#team"> 3 students</a> from Safi Institute of Advanced Study for <mark>TinkerHub Build From Home 2021</mark> Discord Bot for CoWIN Project.</p>
+<p align="center">Hey there! this is a Discord Bot called VacBot, which will check Covid vaccination slots availability in your area and alert you when a slot becomes available. Build by <a href="#team"> 3 students</a> from Safi Institute of Advanced Study for <mark>TinkerHub Build From Home 2021</mark> Discord Bot for CoWIN Project.</p>
 <br>
-<h3 align="center"><a href="#">Join our VacBot server</a></h3>
+<h3 align="center"><a href="#">Join our appukuttan</a></h3>
 
 <br>
 <h4>So,<br>
