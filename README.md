@@ -10,15 +10,13 @@
   
   <br> 
   <h2>So,<br>
-    1. <a href="#work">How it works?</a><br>
-    2. <a href="#use">How to use?</a><br>
-    3. <a href="confiqure">How to Configure Project?</a><br>
-    4. <a href="Library">Which all libraries used?</a><br></h2>
+    1. <a href="#working">How it works?</a><br>
+    2. <a href="#using">How to use?</a><br>
 
 
  <div align=""left>
   
-  ## Team VacBot
+  ## Team Appukuttan
   ### 1.Adheel Ahmed Chelakkot
   ### 2.Abdul Hadi BP
   ### 3.Sreelakshmi K
