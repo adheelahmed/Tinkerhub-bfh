@@ -1,0 +1,21 @@
+save name <name> 
+save age <age>
+save pincode <pin>
+
+
+
+help
+
+
+display data
+
+Register <pincode> <age> 
+
+
+
+
+
+check  <pincode>  <date>
+
+
+
