@@ -19,6 +19,18 @@
   ### 2. <a href="#using">How to use.</a><br>
   ### 3. <a href="#add">How to Add To Your Server.</a><br>
   ### 4. <a href="#brains">Brains Behind Code.</a><br>
+  
+ 
+ <div id="working"><br><h1>How The Bot Works</h1><br><p>The Bot works By Registering You for getting Upadates, and if you wish to edit your data you could do that and even delelte data if you whised to, The Bot can also Display Your Data, And Some Normal chat commands additionaly,The Bot is Currently Hosted Locally but will soon be Hosted in AWS.
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 <div align=""left>
