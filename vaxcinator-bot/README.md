@@ -1,4 +1,6 @@
-
+ 
+  <img src="https://st3.depositphotos.com/8950810/17657/v/600/depositphotos_176577870-stock-illustration-cute-smiling-funny-robot-chat.jpg" height="100px">
+  
 
 <h1 align="center">VacBot(Discord CoWin Bot)</h1>
 
@@ -8,7 +10,7 @@
   <h2>So,<br>
     1. <a href="#work">How it works?</a><br>
     2. <a href="#use">How to use?</a><br>
-    3. <a href="confiqure">How to Configure Project</a><br>
+    3. <a href="confiqure">How to Configure Project?</a><br>
     4. <a href="Library">Which all libraries used?</a><br></h2>
 
 
