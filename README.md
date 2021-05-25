@@ -1,7 +1,7 @@
 <p align="center"><img src="https://trello-attachments.s3.amazonaws.com/542e9c6316504d5797afbfb9/542e9c6316504d5797afbfc1/39dee8d993841943b5723510ce663233/Frame_19.png" width="100%"></p>
 
  
-  <div align="center"><img src="https://st3.depositphotos.com/8950810/17657/v/600/depositphotos_176577870-stock-illustration-cute-smiling-funny-robot-chat.jpg" height="300px"></div>
+  <div align="center"><img src="https://s1.dmcdn.net/v/7Z0-y1LllHvItb1WQ/x1080" height="300px"></div>
   
 
 <h1 align="center">VacBot(Discord CoWin Bot)</h1>
