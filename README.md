@@ -8,7 +8,7 @@
 
 <div align="center">
  
-  ## Vaxcinator-Appukuttan Was Built During Tinkerhub bfh event and will check Covid vaccination slots avilablility in your area and alert you hourly when a slot becomes available.<br>Programmed by 3 Students From Safi Institude Of Advanced Study, Vazhayur
+  ## Vaxcinator-Appukuttan Was Built During Tinkerhub bfh event and will check Covid vaccination slots avilablility in your area and alert you hourly when a slot becomes available.<br>Programmed by 3 Students From Safi Institude Of Advanced Study, Vazhayur.
   
   </div>
   <br> 
