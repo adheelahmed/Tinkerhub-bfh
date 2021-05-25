@@ -6,8 +6,11 @@
 
 <h1 align="center">Vaxcinator-Appukuttan</h1>
 
+<div align="center">
+ 
   ## Vaxcinator-Appukuttan Was Built During Tinkerhub bfh event and will check Covid vaccination slots avilablility in your area and alert you hourly when a slot becomes available.<br>Build by 3 Students From Safi Institude Of Advanced Studies.
   
+  </div>
   <br> 
  <h2>So,<br>
  1. <a href="#working">How the Bot Works</a> <br>
