@@ -1,7 +1,7 @@
 <p align="center"><img src="https://www.filmibeat.com/fanimg/214x100x267/fan_images/4963_20100303_30321400_Jagadish_1.jpg" width="1000px"></p>
 
  
-  <div align="center"><img src="http://www.memezero.com/media/memes/WS149Y.jpg" width="500px"></div>
+  <div align="center"><img src="http://www.memezero.com/media/memes/WS149Y.jpg" width="50px"></div>
   
 
 <h1 align="center">Vaxcinator-Appukuttan</h1>
