@@ -4,7 +4,7 @@
   <div align="center"><img src="http://www.memezero.com/media/memes/WS149Y.jpg" height="260px"></div>
   
 
-<h1 align="center">Vaxcinator Appukuttan</h1>
+<h1 align="center">Vaxcinator-Appukuttan</h1>
 
   ## "Hey,this is a Discord Bot called VacBot,<br>which will check Covid vaccination slots avilablility in your area and alert you when a slot becomes available.Build by 3 students from safi institude of advanced studies for Tinkerhub Build From Home 2021 Discord Bot for coWin Project."
   
