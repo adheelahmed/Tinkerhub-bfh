@@ -15,11 +15,13 @@
 <br>
 
 
-  ### 1. <a href="#working">How the Bot Works</a> <br>
-  ### 2. <a href="#using">How to use?</a><br>
+  ### 1. <a href="#working">How the Bot Works.</a> <br>
+  ### 2. <a href="#using">How to use.</a><br>
+  ### 3. <a href="#add">How to Add To Your Server.</a><br>
+  ### 4. <a href="#brains">Brains Behind Code.</a><br>
 
 
- <div align=""left>
+<div align=""left>
   
   ## Team Appukuttan
   ### 1.Adheel Ahmed Chelakkot| Bsc. Computer Science 1st Yr
