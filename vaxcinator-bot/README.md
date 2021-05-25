@@ -1,5 +1,5 @@
  
-  <div align="center"><img src="https://st3.depositphotos.com/8950810/17657/v/600/depositphotos_176577870-stock-illustration-cute-smiling-funny-robot-chat.jpg" height="300px">
+  <center><img src="https://st3.depositphotos.com/8950810/17657/v/600/depositphotos_176577870-stock-illustration-cute-smiling-funny-robot-chat.jpg" height="300px">
   
 
 <h1 align="center">VacBot(Discord CoWin Bot)</h1>
