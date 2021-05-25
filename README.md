@@ -17,9 +17,9 @@
  <div align=""left>
   
   ## Team Appukuttan
-  ### 1.Adheel Ahmed Chelakkot | Bsc. Computer Science 1st Yr
-  ### 2.Abdul Hadi BP                 | Bsc. Computer Science 2nd Yr
-  ### 3.Sreelakshmi K                 | Bsc. Computer Science 1st Yr
+  ### 1.Adheel Ahmed Chelakkot| Bsc. Computer Science 1st Yr
+  ### 2.Abdul Hadi BP | Bsc. Computer Science 2nd Yr
+  ### 3.Sreelakshmi K| Bsc. Computer Science 1st Yr
   
   </div>
   
