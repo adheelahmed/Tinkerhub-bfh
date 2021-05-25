@@ -18,8 +18,10 @@
 
 
 <br><br>
-<h1 id="use">How to Use the Bot?</h1>
+	<h1 id="use">How to Use the Bot?</h1>
 
+<p>This is a discord app to get upcoming COWIN appointments based on commands. For each command you can register yourself to the database, with your District and Age, you can check the slots for vaccination using your Pincode, update your district while you moving put and a lot more. This bot works in Direct Message, but you can also add the bot to your server, and you can see a link to send Direct Message to the bot. After you register your district with the bot, you'll get the slot availability notification every day at 6:40AM(IST). Excited to check out the bot? Click here to go to '<a href="#use">How to use the bot.</a>'</p>
+	
 1. <a href="#">click here</a> to join our VacBot server<br>
 2. Type <code>$vacbot</code> in text channels to show the wizard where you can see the link to add the bot to other servers and also an option to direct message to the bot. Click that link or clcik on profile.
 3. When you open Direct Message to the bot you can see every command using the <code>help</code> command<br>
