@@ -4,7 +4,8 @@
 
 <h1 align="center">Appukuttan </h1>
 
-<p align="center">The Bot Appukuttan, which will check Covid vaccination slots availability in your pincode and notify you when a slot becomes available.'\n' Build by <a href="#team"> 3 students</a> from Safi Institute of Advanced Study for <mark>TinkerHub Build From Home 2021</mark> Discord Bot for CoWIN Project.</p>
+<p align="center">The Bot Appukuttan, which will check Covid vaccination slots availability in your pincode and notify you when a slot becomes available.
+Build by <a href="#team"> 3 students</a> from Safi Institute of Advanced Study for <mark>TinkerHub Build From Home 2021</mark> Discord Bot for CoWIN Project.</p>
 <br>
 <h3 align="center"><a href="#">Join our appukuttan</a></h3>
 
