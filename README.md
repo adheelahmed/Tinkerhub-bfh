@@ -6,20 +6,20 @@
 
 <h1 align="center">Vaxcinator-Appukuttan</h1>
 
-  ## "Vaxcinator-Appukuttan will check Covid vaccination slots avilablility in your area and alert you when a slot becomes available.<br>Build by 3 Students From Safi Institude oF Advanced Studies For Tinkerhub Build From Home 2021 Discord Bot for coWin Project."
+  ## Vaxcinator-Appukuttan Was Built During Tinkerhub bfh event and will check Covid vaccination slots avilablility in your area and alert you hourly when a slot becomes available.<br>Build by 3 Students From Safi Institude Of Advanced Studies.
   
   <br> 
  <h2>So,<br>
-    1. <a href="#working">W</a><br>
+ 1. <a href="#working">How the Bot Works</a> <br>
     2. <a href="#using">How to use?</a><br>
 
 
  <div align=""left>
   
   ## Team Appukuttan
-  ### 1.Adheel Ahmed Chelakkot
-  ### 2.Abdul Hadi BP
-  ### 3.Sreelakshmi K
+  ### 1.Adheel Ahmed Chelakkot | Bsc. Computer Science 1st Yr
+  ### 2.Abdul Hadi BP          | Bsc. Computer Science 2nd Yr
+  ### 3.Sreelakshmi K          | Bsc. Computer Science 1st Yr
   
   </div>
   
