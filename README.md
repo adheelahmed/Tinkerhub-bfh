@@ -4,7 +4,7 @@
 
 <h1 align="center">Appukuttan </h1>
 
-<p align="center">Hey there! this is a Discord Bot called VacBot, which will check Covid vaccination slots availability in your area and alert you when a slot becomes available. Build by <a href="#team"> 3 students</a> from Safi Institute of Advanced Study for <mark>TinkerHub Build From Home 2021</mark> Discord Bot for CoWIN Project.</p>
+<p align="center">Hey there! this is a Bot called Appukuttan, which will check Covid vaccination slots availability in your pincode and notify you when a slot becomes available. Build by <a href="#team"> 3 students</a> from Safi Institute of Advanced Study for <mark>TinkerHub Build From Home 2021</mark> Discord Bot for CoWIN Project.</p>
 <br>
 <h3 align="center"><a href="#">Join our appukuttan</a></h3>
 
@@ -12,7 +12,7 @@
 <h4>So,<br>
 	@@ -27,14 +27,13 @@
 
-<p>This is a discord app to get upcoming COWIN appointments based on commands. For each command you can register yourself to the database, with your District and Age, you can check the slots for vaccination using your Pincode, update your district while you moving put and a lot more. This bot works in Direct Message, but you can also add the bot to your server, and you can see a link to send Direct Message to the bot. After you register your district with the bot, you'll get the slot availability notification every day at 6:40AM(IST). Excited to check out the bot? '\n'Click here to go to '<a href="#use">How to use the bot.</a>'</p>
+<p>This is a discord app to get upcoming COWIN appointments based on commands. For each command you can register yourself to the database, with your District and Age, you can check the slots for vaccination using your Pincode, update your district while you moving put and a lot more. This bot works in Direct Message, but you can also add the bot to your server, and you can see a link to send Direct Message to the bot. After you register your district with the bot, you'll get the slot availability notification every day at 6:40AM(IST). Excited to check out the bot?Click here to go to '<a href="#use">How to use the bot.</a>'</p>
 
 
 
