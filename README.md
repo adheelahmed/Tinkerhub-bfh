@@ -14,8 +14,9 @@
    
 <br>
 
- 1. <a href="#working">How the Bot Works</a> <br>
- 2. <a href="#using">How to use?</a><br>
+
+  ### 1. <a href="#working">How the Bot Works</a> <br>
+  ### 2. <a href="#using">How to use?</a><br>
 
 
  <div align=""left>
