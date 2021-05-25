@@ -21,7 +21,9 @@
   ### 4. <a href="#brains">Brains Behind Code.</a><br>
   
  
- <div id="working"><br><h1>How The Bot Works</h1><br><p>The Bot works By Registering You for getting Upadates.<br>If you wish to edit your data you could do that. <br>And Yes even delelte your data if you whised to.<br>The Bot can also Display Your Data.<br>Additionally You can use Some Normal chat commands.<br>The Bot is Currently Hosted Locally but will soon be Hosted in AWS.
+ <div id="working"><br><h1>How The Bot Works</h1><br><p>The Bot works By Registering You for getting Upadates.<br>If you wish to edit your data you could do that. <br>And Yes even delelte your data if you whised to.<br>The Bot can also Display Your Data.<br>The Data is Stored In Mongodb.<br>Additionally You can use Some Normal chat commands.<br>The Bot is Currently Hosted Locally but will soon be Hosted in AWS.</p></div>
+ 
+ <div id="using"><br><h1>How To Use</h1><br><p>Firstly To Use The Service
   
   
   
