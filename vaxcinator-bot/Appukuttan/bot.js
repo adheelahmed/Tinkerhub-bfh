@@ -6,8 +6,6 @@ const https = require('https')
 const { checkServerIdentity } = require('tls')
 
 
-
-
 const db_name = process.env.MONGO_DBNAME // value of database name to db_name
 const MongoClient = require('mongodb').MongoClient;
 const mongoUri = "mongodb+srv://"+process.env.MONGO_USERNAME+":"+process.env.MONGO_PASSWORD+"@"+process.env.MONGO_CLUSTER+"/"+db_name; // hid details
@@ -26,7 +24,14 @@ client.connect(err => {
 bot.on('message', async (msg)=>{
 // All will be explained in detail on video and it will be uploaded in our Git-Hub repo
 
-    if(msg.author.bot) return;
+    if(msg.author.bot) return; 
+
+    console.log(`[${msg.author.tag}]: ${msg.content} `);
+
+
+
+if(msg.channel.type=="dm")
+{
 
     const cmds = msg.content.toLocaleLowerCase().split(' ')  // makes all commands in to different arrays 
     
@@ -35,6 +40,7 @@ bot.on('message', async (msg)=>{
     if(cmds[0]=="register" && cmds[1] && cmds[2]){
        await addUser(User, cmds[1], cmds[2])                     
        await displayData(User)
+       msg.reply("Add your name by the 'save' command check 'help' if needed")
     }
     else if(cmds[0]=="save" && cmds[1]=="name" && cmds[2]) {
         await addName(User, cmds[2])                            
@@ -59,9 +65,56 @@ bot.on('message', async (msg)=>{
         await check(User, cmds[1], cmds[2])
     }
     else{
-        msg.channel.send("Invalid Command To chat with me Start with Prefix (.)\nChoose a command from below")
+        msg.channel.send("Im Sorry That Command is not available\nChoose a command from below")
         await help(User)
     }
+
+
+
+}else{
+
+        var Array=["\nHello There....And be Safe From Covid\nTo Check Vaccination Slot dm 'help'","Ahoy There!\nTo get Updates on availability of covid vaccine dm 'help' to me","Hi There!\nTo start Registration try direct messaging 'help' to me" ,"Helooooo!\nCheck availability of vaccine by registering, To start dm me 'help'" ,"Hi There!,Hope you Are fine\ndm me 'help' to begin registration" ,"hoooiii...! Good to See you!\nStart the process of checking vaccine slots by direct messaging 'help'" , ];
+        var randomWord = Array[Math.floor(Math.random()* Array.length)];
+    
+        if(msg.content.toLowerCase() == "hello" )
+        {
+        msg.reply(randomWord);
+        return 0;
+        }
+        if(msg.content.toLowerCase() == "helo" )
+        {
+        msg.reply(randomWord);
+        return 0;
+        }
+        
+        if(msg.content.toLowerCase() == "hi" )
+        {
+        msg.reply(randomWord);
+        return 0;
+        }
+        
+        if(msg.content.toLowerCase() == "hlo" )
+        {
+        msg.reply(randomWord);
+        return 0;
+        }
+        
+        if(msg.content.toLowerCase() == "lo" )
+        {
+        msg.reply(randomWord);
+        return 0;
+        }
+        
+        if(msg.content.toLowerCase() == "hai" )
+        {
+        msg.reply(randomWord);
+        return 0;
+        }
+
+
+    }
+
+
 })
 
 
@@ -69,8 +122,9 @@ bot.on('message', async (msg)=>{
 
 bot.on('ready',()=>{
     console.log('logged in as '+bot.user.tag)
-   bot.user.setActivity("EkanthaChandrike",{type:"LISTENING"})
+    bot.user.setActivity("Ekantha Chandrike, Try Help",{type:"LISTENING"})
 })
+
 
 
 
@@ -80,17 +134,18 @@ bot.login(process.env.BOT_TOKEN)
 
 
 
+
 async function addUser(id, pin, age){
 
     const database = client.db(db_name)
- 
-   let exists = await database.collection('users').countDocuments({id:id})
-   if(!exists){
+    let exists = await database.collection('users').countDocuments({id:id})
+
+    if(!exists){
        await database.collection('users').insertOne({id: id,age:age,pin:pin})
     }
 
-   
 }
+
 async function displayData(id){
 
     const database = client.db(db_name)        
@@ -99,37 +154,21 @@ async function displayData(id){
         const userData=await database.collection('users').findOne({id:id})
         let dataMessage = new Discord.MessageEmbed()
             .setColor('#C9FF00')
-            .setTitle('User Data')
+            .setTitle('Your Data')
             .addFields(
                 { name: 'Name', value: userData.name},
                 { name: 'Age', value: userData.age},
                 { name: 'pincode', value: userData.pin},
                        
             );
-        const fetchedUser=await bot.users.fetch(id).catch(() => console.log('could not find user'));
+        const fetchedUser=await bot.users.fetch(id).catch(() => console.log('could not find the user'));
         await fetchedUser.send(dataMessage)
     }else{
-        const fetchedUser=await bot.users.fetch(id).catch(() => console.log('could not find user'));
-        await fetchedUser.send('You are not a registered user.')
+        const fetchedUser=await bot.users.fetch(id).catch(() => console.log('could not find the user'));
+        await fetchedUser.send('You are not registered.')
         //send message to user
     }  
     console.log("displayData")
-}
-
-
-const embed = new Discord.MessageEmbed()
-.setColor('#C9FF00')
-.setTitle('Help')
-.addFields(
-    { name: 'To Register Type', value:'Register (Pincode) (Age)'},
-    { name: 'To Save Name', value:'save (name)'},
-    { name: 'To Save Age', value:'save (age)'},
-    { name: 'To Save Pincode', value:'save (pincode)'},
-)
-
-async function help(id){
-    const fetchedUser=await bot.users.fetch(id).catch(() => console.log('could not find user'));
-    await fetchedUser.send(embed)
 }
 
 async function addName(id, name){
@@ -137,16 +176,39 @@ async function addName(id, name){
     await database.collection('users').updateOne({id:id},{$set:{name:name}})  
     
 }
+
 async function addAge(id, age){
     const database =client.db(db_name)
     await database.collection('users').updateOne({id:id},{$set:{age:age}})  
     
 }
+
 async function addPincode(id, pin){
     const database =client.db(db_name)
-    await database.collection('users').updateOne({id:id},{$set:{pin:pin}})  
-    
+    await database.collection('users').updateOne({id:id},{$set:{pin:pin}})     
 }
+
+async function help(id){
+    const fetchedUser=await bot.users.fetch(id).catch(() => console.log('could not find the user'));
+    await fetchedUser.send(embed)
+}
+
+const embed = new Discord.MessageEmbed()
+.setColor('#C9FF00')
+.setTitle('Your Help Is Here! :angel: ')
+.addFields(
+    { name: 'To Check For Vaccine Enter', value:'"check (pincode) (dd-mm-yyyy)"'},
+    { name: 'To Register For Update Enter', value:'"Register (Pincode) (Age)"'},
+    { name: 'To Display Your Data Enter', value:'"display data"'},
+    { name: '\nIf You Have Entered Wrong User Information', value:'Use the "save" command given below to Update'},
+    { name: 'To Change/Save Name Enter', value:'"save name (name)"\n(Consider To Enter you name without spaces\nIf needed to add full name use "-")'},
+    { name: 'To Change/Save Age Enter', value:'"save age (age)"'},
+    { name: 'To Change/Save Pincode Enter', value:'"save pincode (pincode)"'},
+   
+)
+
+
+
 
 async function check(id, pin, date){
 
@@ -164,26 +226,27 @@ async function check(id, pin, date){
                
                 await data.sessions.forEach((i)=>{
                     if(i.available_capacity>0){                     
-                        arr.push({name:i.name,value:`date : ${i.date}\ncenter id : ${i.center_id}\nname : ${i.name}\naddress : ${i.address}\nblock name : ${i.block_name}\npincode : ${i.pincode}\n\nfee type : ${i.fee_type}\nfee : ${i.fee}\nvaccine : ${i.vaccine}\nminimum age : ${i.min_age_limit}\n\ndose 1 capacity : ${i.available_capacity_dose1}\ndose 2 capacity : ${i.available_capacity_dose2}`})
+                        arr.push({name:i.name,value:`Date : ${i.date}\nCenter id : ${i.center_id}\nName : ${i.name}\nAddress : ${i.address}\nBlock name : ${i.block_name}\nPincode : ${i.pincode}\n\nFee type : ${i.fee_type}\nFee : ${i.fee}\nVaccine Name : ${i.vaccine}\nMinimum age : ${i.min_age_limit}\n\nDose 1 Capacity : ${i.available_capacity_dose1}\nDose 2 Capacity : ${i.available_capacity_dose2}`})
                     }
                 })
-                let regMsg=new Discord.MessageEmbed()
+                let regmsg=new Discord.MessageEmbed()
                             .setColor('#C9FF00')
                             .addFields({name:"To register,visit",value:"https://www.cowin.gov.in/home"})
-                let nodataMsg=new Discord.MessageEmbed()
-                            .setTitle('Available slots : '+date)
-                            .setColor('#ff1111')
-                            .setDescription('No available slots in this location')        
+                let nodata=new Discord.MessageEmbed()
+                            .setTitle('No slots Currently : '+date)
+                            .setColor('#00FFFF')
+                            .setDescription('There are No available slots in this location right now!')        
                  if(arr.length>0){
                     arr.forEach(async(i)=>{
-                        let dataMsg=new Discord.MessageEmbed()
+                        let datamsg=new Discord.MessageEmbed()
                             .setTitle(i.name)
+                            .setColor('#00FFFF')
                             .setDescription(i.value)
-                        await fetchedUser.send(dataMsg)
+                        await fetchedUser.send(datamsg)
                     })
-                    await fetchedUser.send(regMsg) 
+                    await fetchedUser.send(regmsg) 
                 }else{
-                    await fetchedUser.send(nodataMsg) 
+                    await fetchedUser.send(nodata) 
                 }                  
             })
         }
