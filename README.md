@@ -6,7 +6,7 @@
 
 <h1 align="center">Vaxcinator-Appukuttan</h1>
 
-<div align="center">
+<div align="left">
  
   #### Vaxcinator-Appukuttan Is A Discord Bot And Was Built During Tinkerhub BFH(Build From Home) Event And Will Check Covid Vaccination Slots Avilablility In Your Area And Alert You Hourly When A Slot Becomes Available.<br>Programmed by 3 Students From Safi Institude Of Advanced Study, Vazhayur.
   
